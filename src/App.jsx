@@ -1,8 +1,10 @@
+import { MainCanvas } from "./components/MainCnavas";
+
 function App() {
   return (
-    <>
-      <h1>r3f playground</h1>
-    </>
+    <div style={{ width: "100vw", height: "100vh" }}>
+      <MainCanvas />
+    </div>
   );
 }
 
