@@ -1,4 +1,13 @@
-import { Box, Plane } from "@react-three/drei";
+import {
+  Box,
+  Circle,
+  Cone,
+  Cylinder,
+  Plane,
+  Sphere,
+  Torus,
+} from "@react-three/drei";
+import * as THREE from "three";
 
 /* eslint-disable react/no-unknown-property */
 export const Meshes = () => {
@@ -14,6 +23,20 @@ export const Meshes = () => {
       <Box args={[1, 1, 1]} position-y={0.5} castShadow>
         <meshStandardMaterial color={0xff0000} />
       </Box>
+      <Sphere args={[1]} position={[0, 1, 3]} material-color={0xffff00} />
+      <Circle
+        args={[1]}
+        position={[0, 1, -3]}
+        material-color={"violet"}
+        material-side={THREE.DoubleSide}
+      />
+      <Cone args={[1, 2]} position={[3, 1, 3]} material-color={"turquoise"} />
+      <Cylinder
+        args={[2, 1, 2]}
+        position={[3, 1, -3]}
+        material-color={"skyblue"}
+      />
+      <Torus args={[1, 0.2]} position={[-3, 1.2, -3]} material-color={"pink"} />
     </>
   );
 };
