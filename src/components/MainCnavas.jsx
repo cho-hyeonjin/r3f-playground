@@ -32,6 +32,7 @@ export const MainCanvas = () => {
         shadow-camera-far={1000}
         shadow-mapSize-width={4096}
         shadow-mapSize-height={4096}
+        castShadow
       />
       <Meshes />
     </Canvas>
